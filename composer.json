@@ -3,6 +3,10 @@
     "description": "Easily create portfolio with exhibitions, exhibits, assets, categories and more",
     "require": {
         "php": "^5.3.3 || ^7.0"
+<<<<<<< HEAD
     },
 "minimum-stability": "stable"
+=======
+    }
+>>>>>>> parent of 6764f18... "minimum-stability": "dev"
 }
