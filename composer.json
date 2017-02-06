@@ -1,0 +1,8 @@
+{
+    "name": "rodasnet/portfolio",
+    "description": "Easily create portfolio with exhibitions, exhibits, assets, categories and more",
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+        "another-vendor/package": "1.*"
+    }
+}
