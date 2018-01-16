@@ -6,10 +6,10 @@
  * Time: 12:36 AM
  */
 
-namespace Portfolio\Model;
+namespace Rodasnet\Portfolio\Model;
 
 use Orm\Model_Soft;
-use Portfolio\Validation;
+use Rodasnet\Portfolio\Validation;
 
 class Access extends Model_Soft
 {

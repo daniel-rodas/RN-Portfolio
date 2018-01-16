@@ -1,10 +1,10 @@
 <?php
 
-namespace Portfolio\Model;
+namespace Rodasnet\Portfolio\Model;
 
-use Portfolio\Model\Portfolio as ModelPortfolio;
-use Portfolio\Model\Asset as ModelAsset;
-use Portfolio\Model\Access as ModelAccess;
+use Rodasnet\Portfolio\Model\Portfolio as ModelPortfolio;
+use Rodasnet\Portfolio\Model\Asset as ModelAsset;
+use Rodasnet\Portfolio\Model\Access as ModelAccess;
 
 class Exhibit extends ModelAccess
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Portfolio;
+namespace Rodasnet\Portfolio;
 
 /**
  * Validation class.

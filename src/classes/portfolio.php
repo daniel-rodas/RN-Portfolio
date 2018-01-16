@@ -1,10 +1,10 @@
 <?php
 
-namespace Portfolio;
+namespace Rodasnet\Portfolio;
 
-use Portfolio\Model\Portfolio as ModelPortfolio;
-use Portfolio\Model\Exhibit as ModelExhibit;
-use Portfolio\Model\Asset as ModelAsset;
+use Rodasnet\Portfolio\Model\Portfolio as ModelPortfolio;
+use Rodasnet\Portfolio\Model\Exhibit as ModelExhibit;
+use Rodasnet\Portfolio\Model\Asset as ModelAsset;
 
 class PortfolioException extends \FuelException {}
 

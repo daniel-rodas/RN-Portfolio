@@ -1,9 +1,9 @@
 <?php
 
-namespace Portfolio\Model;
+namespace Rodasnet\Portfolio\Model;
 
-use Category\Model\Category as ModelCategory;
-use Portfolio\Model\Access as ModelAccess;
+use Rodasnet\Category\Model\Category as ModelCategory;
+use Rodasnet\Portfolio\Model\Access as ModelAccess;
 
 class Featured extends ModelAccess
 {

@@ -6,10 +6,10 @@
  * Time: 12:54 AM
  */
 
-namespace Portfolio;
+namespace Rodasnet\Portfolio;
 
-use Portfolio\Model\Portfolio as ModelPortfolio;
-use Portfolio\Model\Access as ModelAccess;
+use Rodasnet\Portfolio\Model\Portfolio as ModelPortfolio;
+use Rodasnet\Portfolio\Model\Access as ModelAccess;
 
 class Access
 {
