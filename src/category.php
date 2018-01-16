@@ -2,7 +2,7 @@
 
 namespace Rodasnet\Portfolio;
 
-use Access\Category as Access;
+use Rodasnet\Portfolio\Access\Category as Access;
 
 class PortfolioCategoryException extends \FuelException {}
 
