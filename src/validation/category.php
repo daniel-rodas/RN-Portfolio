@@ -5,7 +5,7 @@ namespace Rodasnet\Portfolio;
 /**
  * Validation category class.
  */
-class Category extends \Rodasnet\Portfolio\Validation
+class CategoryValidation extends \Rodasnet\Portfolio\Validation
 {
 	/**
 	 * Creates a new validation instance for product create.

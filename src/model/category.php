@@ -1,8 +1,8 @@
 <?php
 
-namespace Rodasnet\Portfolio\Category\Model;
+namespace Rodasnet\Portfolio\Model;
 
-use Rodasnet\Portfolio\Category\Validation;
+use Rodasnet\Portfolio\CategoryValidation as Validation;
 use Rodasnet\Portfolio\Model\Portfolio as ModelPortfolio;
 
 class Category extends \Orm\Model_Soft

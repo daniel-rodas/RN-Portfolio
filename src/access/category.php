@@ -8,7 +8,7 @@
 
 namespace Rodasnet\Portfolio\Access;
 
-use Rodasnet\Portfolio\Category\Model\Category as ModelCategory;
+use Rodasnet\Portfolio\Model\Category as ModelCategory;
 
 class Category
 {
