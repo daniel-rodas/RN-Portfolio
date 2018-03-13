@@ -2,13 +2,17 @@
 
 namespace Rodasnet\Portfolio;
 
+use Rodasnet\Portfolio\Model\Exhibit;
 use Rodasnet\Portfolio\Model\Portfolio as ModelPortfolio;
 use Rodasnet\Portfolio\Model\Exhibit as ModelExhibit;
 use Rodasnet\Portfolio\Model\Asset as ModelAsset;
+use Rodasnet\Portfolio\Interfaces\IAccessModel;
+use Rodasnet\Portfolio\Interfaces\IExhibitService;
+use Rodasnet\Portfolio\Service\AccessService;
 
 class PortfolioException extends \FuelException {}
 
-class Portfolio
+class Portfolio implements IExhibitService
 {
 	/**
 	 * Default config
@@ -67,7 +71,7 @@ class Portfolio
 	public function __construct(array $config = array())
 	{
 		$this->config = $config;
-		$this->access = new Access(  ModelPortfolio::forge() );
+		$this->access = new AccessService(  ModelPortfolio::forge() );
 	}
 
 	/**
@@ -152,15 +156,25 @@ class Portfolio
 	}
 
     /**
+     * @Depricated
      * @param $slug
-     * @return ModelExhibit;
+     * @return IAccessModel;
+     */
+    public function exhibit( $slug )
+    {
+        return $this->getExhibit( $slug );
+    }
+
+    /**
+     * @param $slug
+     * @return IAccessModel;
      */
 
-    public function exhibit( $slug )
-	{
+    public function getExhibit( string $slug ) : IAccessModel
+    {
         $this->access->setModel( ModelExhibit::forge() );
-		return $this->access->getOne( $slug , 'slug' );
-	}
+        return $this->access->getOne( $slug , 'slug' );
+    }
 
     /**
      * @param $asset

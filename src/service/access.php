@@ -6,12 +6,15 @@
  * Time: 12:54 AM
  */
 
-namespace Rodasnet\Portfolio;
+namespace Rodasnet\Portfolio\Service;
 
+use Rodasnet\Portfolio\Interfaces\IAccess;
 use Rodasnet\Portfolio\Model\Portfolio as ModelPortfolio;
 use Rodasnet\Portfolio\Model\Access as ModelAccess;
+use Rodasnet\Portfolio\Interfaces\IAccessService;
+use Rodasnet\Portfolio\Interfaces\IAccessModel;
 
-class Access
+class AccessService implements IAccessService
 {
     // TODO https://en.wikipedia.org/wiki/Fluent_interface#PHP
     protected $id;
@@ -58,9 +61,9 @@ class Access
     /**
      * @param $identifier
      * @param string $field
-     * @return \Orm\Model
+     * @return IAccessModel
      */
-    public function getOne($identifier , $field = 'id' )
+    public function getOne(string $identifier , string $field = 'id' ) : IAccessModel
     {
         return $this->model->query()->where( $field , $identifier )->get_one();
     }

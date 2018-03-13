@@ -10,8 +10,9 @@ namespace Rodasnet\Portfolio\Model;
 
 use Orm\Model_Soft;
 use Rodasnet\Portfolio\Validation;
+use Rodasnet\Portfolio\Interfaces\IAccessModel;
 
-class Access extends Model_Soft
+abstract class Access extends Model_Soft implements IAccessModel
 {
     public static function _init()
     {
