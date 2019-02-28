@@ -2,7 +2,14 @@
     "name": "rodasnet/portfolio",
     "description": "Easily create portfolio with exhibitions, exhibits, assets, categories and more",
     "require": {
-        "php": "^5.3.3 || ^7.0"
+        "php": "^5.3.3 || ^7.0",
+        "fuel/orm":"1.8.0.1"
     },
-	"minimum-stability": "stable"
+    "autoload": {
+
+            "psr-4": { "Rodasnet\\Portfolio\\": "src/" }
+
+    },
+    "minimum-stability": "stable"
+
 }

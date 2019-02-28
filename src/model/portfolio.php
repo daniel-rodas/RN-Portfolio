@@ -1,26 +1,23 @@
 <?php
 
-namespace Portfolio\Model;
+namespace Rodasnet\Portfolio\Model;
 
-use Portfolio\Model\Access as ModelAccess;
-use Category\Model\Category as ModelCategory;
-use Portfolio\Model\Portfolio as ModelPortfolio;
-use Portfolio\Model\Exhibit as ModelExhibit;
+use Rodasnet\Category\Model\Category as ModelCategory;
+use Rodasnet\Portfolio\Model\Access as ModelAccess;
 
-class Asset extends ModelAccess
+class Portfolio extends ModelAccess
 {
-	protected static $_properties = [
-		'id',
-		'name',
-		'slug',
-		'url',
-		'type',
-		'category_id',
-		'description',
-		'parent_id',
-		'deleted_at',
-		'created_at',
-		'updated_at',
+    protected static $_properties = [
+        'id',
+        'name',
+        'slug',
+        'url',
+        'category_id',
+        'description',
+        'parent_id',
+        'deleted_at',
+        'created_at',
+        'updated_at',
     ];
 
 	protected static $_observers = [
@@ -38,7 +35,7 @@ class Asset extends ModelAccess
 		'mysql_timestamp' => false,
     ];
 
-	protected static $_table_name = 'assets';
+	protected static $_table_name = 'exhibitions';
 
     /**
      * Portfolio BelongsTo Category
@@ -53,14 +50,17 @@ class Asset extends ModelAccess
             'cascade_save' => false,
             'cascade_delete' => false,
         ],
-		'exhibit' => [
-            'key_from' => 'parent_id',
-            'model_to' => 'Portfolio\Model\Exhibit',
-            'key_to' => 'id',
-            'cascade_save' => false,
-            'cascade_delete' => false,
-        ],
     ];
+
+	protected static $_has_many = [
+		'exhibits' => [
+			'key_from' => 'id',
+			'model_to' => 'Portfolio\Model\Exhibit',
+			'key_to' => 'parent_id',
+			'cascade_save' => true,
+			'cascade_delete' => false,
+		]
+	];
 
     public static function set_form_fields($form, $instance = null)
     {
